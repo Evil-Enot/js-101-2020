@@ -49,6 +49,15 @@ const resolvers = {
       };
       libraries.push(newLibrary);
       return libraries;
+    },
+
+    replaceBookTitle(_, { id, title }) {
+      const currBook = books.find(book => book.id === id);
+      if (!currBook) {
+        throw new Error("This book not found");
+      }
+      currBook.title = title;
+      return currBook;
     }
   }
 };
