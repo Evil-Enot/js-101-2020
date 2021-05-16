@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-
 export const MainControls = (props: {
   addNewTodo: (text: string) => void,
   markAllAsReady: () => void
@@ -41,4 +40,3 @@ export const MainControls = (props: {
         </section>
     );
 };
-
